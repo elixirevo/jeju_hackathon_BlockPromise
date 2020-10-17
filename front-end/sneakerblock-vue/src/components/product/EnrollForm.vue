@@ -108,7 +108,7 @@ export default {
       this.imageUrl = URL.createObjectURL(file)
     },
     enrollItem() {
-      console.log(typeof true)
+      // console.log(typeof true)
       this.$apollo
         .mutate({
           mutation: ENROLL,
@@ -126,6 +126,7 @@ export default {
         })
         .then(result => {
           console.log(result.data)
+          alert('검증신청이 완료되었습니다. 제품을 슈박스로 배송해주세요')
         })
         .catch(error => {
           console.log(error)
